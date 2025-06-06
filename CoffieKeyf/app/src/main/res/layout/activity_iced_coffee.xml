@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDEFD2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/iced_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <!-- Tanıtım Kutusu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_background"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="8dp"
+            android:elevation="2dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enjoy your coffee"
+                    android:textColor="#3E2723"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order coffee with fast delivery"
+                    android:textColor="#5D4037"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="36dp"
+                android:contentDescription="Coffee icon"
+                android:src="@drawable/coffee_beans" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="MENU"
+            android:textColor="#5D4037"
+            android:textSize="29dp"
+            android:textStyle="bold" />
+
+        <!-- Iced Toggle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnCoffee"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Hot Coffee"
+                android:textColor="#FDEFD2"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnIcedCoffe"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Iced Coffee"
+                android:textSize="19dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/button_background"
+                android:textColor="#FDEFD2"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icedCoffeeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:padding="16dp">
+
+            <!-- Satır: Görsel + İsim + Fiyat + Seçme -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="icedcoffee"
+                    android:src="@drawable/iced_coffee"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ice Coffee"
+                        android:textColor="#3E2723"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$5.99"
+                        android:textColor="#888888"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radioIceCoffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <!-- Ürün 1: Ice Coffee  -->
+            <LinearLayout
+                android:id="@+id/icedCoffeeForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etIceCoffeeAdet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Adet girin"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnIceCoffeeOnayla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#A84624"
+                    android:text="Siparişi Onayla"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Ürün 2: Ice Mocha -->
+        <LinearLayout
+            android:id="@+id/IceMochaCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Ice Mocha"
+                    android:src="@drawable/ice_coffee_pipetli" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ice Mocha"
+                        android:textColor="#3E2723"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$7.99"
+                        android:textColor="#888888"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radioIceMocha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/IceMochaForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etIceMochaAdet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Adet girin"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnIceMochaOnayla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#A84624"
+                    android:text="Siparişi Onayla"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Ürün 3: Bubble Tea -->
+        <LinearLayout
+            android:id="@+id/BubbleTea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="BubbleTea"
+                    android:src="@drawable/bubble_tea" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bubble Tea"
+                        android:textColor="#3E2723"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$6.99"
+                        android:textColor="#888888"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radioBubbleTea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BubbleTeaForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/BubbleTeaAdet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Adet girin"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/BubbleTeaOnayla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#A84624"
+                    android:text="Siparişi Onayla"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Adet Girişi -->
+        <LinearLayout
+            android:id="@+id/siparisAlani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etAdet"
+                android:layout_width="333dp"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:hint="Enter Quantity"
+                android:textColor="#5D4037"
+                android:textColorHint="#5D4037"
+                android:textSize="19dp" />
+
+            <TextView
+                android:id="@+id/tvSiparisOzeti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="#5D4037"
+                android:textSize="19dp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/btnOnayla"
+                android:layout_width="165dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Confirm Order"
+                android:textColor="#FDEFD2"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

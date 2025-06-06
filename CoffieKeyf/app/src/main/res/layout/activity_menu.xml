@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDEFD2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+
+        <!-- Tanıtım Kutusu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_background"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="8dp"
+            android:elevation="2dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enjoy your coffee"
+                    android:textColor="#3E2723"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order coffee with fast delivery"
+                    android:textColor="#5D4037"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="39dp"
+                android:contentDescription="Coffee icon"
+                android:src="@drawable/coffee_beans" />
+        </LinearLayout>
+
+        <!-- Menü Başlık -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENU"
+            android:textSize="29dp"
+            android:textStyle="bold"
+            android:textColor="#5D4037"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <!-- Hot/Iced Toggle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnCoffee"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Hot Coffee"
+                android:textColor="#FDEFD2"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnIcedCoffe"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Iced Coffee"
+                android:textSize="19dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/button_background"
+                android:textColor="#FDEFD2"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroupKahve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/espressoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:padding="16dp">
+
+            <!-- Satır: Görsel + İsim + Fiyat + Seçme -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/espresso"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Espresso" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Espresso"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#3E2723"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$3.99"
+                        android:textSize="16sp"
+                        android:textColor="#888888" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radioEspresso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_checked_color"
+                    />
+            </LinearLayout>
+
+            <!-- Espresso seçilince gözükecek adet ve buton -->
+            <LinearLayout
+                android:id="@+id/espressoForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="12dp">
+
+                <EditText
+                    android:id="@+id/etEspressoAdet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Adet girin"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnEspressoOnayla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Siparişi Onayla"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#A84624"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Ürün 2: Latte -->
+        <LinearLayout
+            android:id="@+id/latteCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/latte"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Latte" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Latte"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#3E2723"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$4.99"
+                        android:textSize="16sp"
+                        android:textColor="#888888"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radioLatte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_checked_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/latteForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="12dp">
+
+                <EditText
+                    android:id="@+id/etLatteAdet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Adet girin"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnLatteOnayla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Siparişi Onayla"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#A84624"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Ürün 3: Mocha -->
+        <LinearLayout
+            android:id="@+id/mochaCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/mocha"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Mocha" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mocha"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#3E2723"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$4.99"
+                        android:textSize="16sp"
+                        android:textColor="#888888"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/radioMocha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_checked_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mochaForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="12dp">
+
+                <EditText
+                    android:id="@+id/etMochaAdet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Adet girin"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnMochaOnayla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Siparişi Onayla"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#A84624"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+        </RadioGroup>
+
+        <!-- Adet Girişi -->
+        <LinearLayout
+            android:id="@+id/siparisAlani"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_background"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etAdet"
+                android:layout_width="333dp"
+                android:layout_height="40dp"
+                android:hint="Enter Quantity"
+                android:inputType="number"
+                android:textColor="#5D4037"
+                android:textColorHint="#5D4037"
+                android:textSize="19dp"
+                android:backgroundTint="#5D4037"/>
+
+            <TextView
+                android:id="@+id/tvSiparisOzeti"
+                android:layout_width="29dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="12dp"
+                android:textColor="#5D4037"
+                android:textSize="19dp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/btnOnayla"
+                android:layout_width="172dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Confirm Order"
+                android:textColor="#FDEFD2"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
